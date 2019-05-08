@@ -7,6 +7,8 @@ Mula WordPress plugin intergrates Mula with a merchants' shop allowing them to r
   - Receive payments in any currency
   - Run a smooth clean shop!
 
+> WooCommerce should be installed for the plugin to function properly
+
 # New Features! 
   - Manage default country
   - Manage payment expiry time
