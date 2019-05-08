@@ -1,0 +1,12 @@
+{
+    "name": "mula/mula",
+    "description": "Mula WordPress Plugin",
+    "autoload": {
+        "psr-4": {
+            "Mula\\": "src"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^1.24"
+    }
+}

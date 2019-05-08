@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+#mula-plugin-checkout-page {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#mula-plugin-checkout-page > #mula-checkout-form {
+    width: 40%;
+    margin: auto;
+}
+
+#mula-plugin-checkout-page > #mula-checkout-form > div > .checkout-form-field {
+    width: 100%;
+}
+
+#mula-checkout-form > div > small[id$="Help"] {
+    color: #7e7e7e;
+}
+
+#amount-currency-input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#amount-currency-input-group > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.errored-field {
+    color: #ff6347 !important;
+}
+
+.valid-field {
+    color: #2e8b57 !important;
+}
