@@ -159,6 +159,7 @@ function process_mula_checkout_request() {
         "requestDescription" => get_bloginfo('name'),
         "merchantTransactionID" => $merchantTransactionId,
         "serviceCode" => get_option(Config::SERVICE_CODE_TEXT_INPUT),
+        "paymentWebhookUrl" => get_permalink(get_page_by_path(Config::WEB_HOOK_PAGE_SLUG)),
         "failRedirectUrl" => get_permalink(get_page_by_path(Config::FAILED_REDIRECT_PAGE_SLUG)),
         "successRedirectUrl" => get_permalink(get_page_by_path(Config::SUCCESS_REDIRECT_PAGE_SLUG)),
         "dueDate" => date("Y-m-d H:i:s", strtotime("+".get_option(Config::DUE_DATE_NUMBER_INPUT)." minutes"))

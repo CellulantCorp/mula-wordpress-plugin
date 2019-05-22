@@ -35,6 +35,7 @@ class Config {
 
     //public pages
     const CHECKOUT_PAGE_SLUG = 'mula-checkout';
+    const WEB_HOOK_PAGE_SLUG = 'mula-web-hook';
     const FAILED_REDIRECT_PAGE_SLUG = 'mula-fail-redirect';
     const SUCCESS_REDIRECT_PAGE_SLUG = 'mula-success-redirect';
 
