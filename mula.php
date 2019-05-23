@@ -137,10 +137,6 @@ function process_mula_checkout_request() {
     $customerEmail = $_POST['customerEmail'];
     $customerLastName = $_POST['customerLastName'];
     $customerFirstName = $_POST['customerFirstName'];
-    $merchantTransactionId = implode(
-        '',
-        array_map(function($word) { return $word[0]; }, preg_split("/[\s,_-]+/", get_bloginfo('name')))
-    ) . strtotime('now');
 
     if ( class_exists( 'WooCommerce' ) ) {
         $currencyCode = strtoupper(get_woocommerce_currency());
@@ -157,7 +153,7 @@ function process_mula_checkout_request() {
         "customerFirstName" => $customerFirstName,
         "paymentWebhookUrl" => get_bloginfo('url'),
         "requestDescription" => get_bloginfo('name'),
-        "merchantTransactionID" => $merchantTransactionId,
+        "merchantTransactionID" => strtotime('now'),
         "serviceCode" => get_option(Config::SERVICE_CODE_TEXT_INPUT),
         "paymentWebhookUrl" => get_permalink(get_page_by_path(Config::WEB_HOOK_PAGE_SLUG)),
         "failRedirectUrl" => get_permalink(get_page_by_path(Config::FAILED_REDIRECT_PAGE_SLUG)),
