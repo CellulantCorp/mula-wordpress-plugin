@@ -26,16 +26,16 @@ class Config {
 
     //plugin
     const IV_KEY_TEXT_INPUT = self::INPUT_FIELD_PREFIX.'iv_key';
+    const DUE_DATE_NUMBER_INPUT = self::INPUT_FIELD_PREFIX.'due_date';
     const SECRET_KEY_TEXT_INPUT = self::INPUT_FIELD_PREFIX.'secret_key';
     const ACCESS_KEY_TEXT_INPUT = self::INPUT_FIELD_PREFIX.'access_key';
-    const DUE_DATE_NUMBER_INPUT = self::INPUT_FIELD_PREFIX.'due_date';
+    const WEBHOOK_URL_TEXT_INPUT = self::INPUT_FIELD_PREFIX.'webhook_url';
     const SERVICE_CODE_TEXT_INPUT = self::INPUT_FIELD_PREFIX.'service_code';
     const COUNTRY_CODE_SELECT_INPUT = self::INPUT_FIELD_PREFIX.'country_code';
     const CHECKOUT_TYPE_SELECT_INPUT = self::INPUT_FIELD_PREFIX.'checkout_type';
 
     //public pages
     const CHECKOUT_PAGE_SLUG = 'mula-checkout';
-    const WEB_HOOK_PAGE_SLUG = 'mula-web-hook';
     const FAILED_REDIRECT_PAGE_SLUG = 'mula-fail-redirect';
     const SUCCESS_REDIRECT_PAGE_SLUG = 'mula-success-redirect';
 

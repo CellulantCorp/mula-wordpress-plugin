@@ -14,12 +14,23 @@ class Mula {
             self::createConfigPageInput('text',Config::IV_KEY_TEXT_INPUT, 'IV KEY');
             self::createConfigPageInput('text',Config::SECRET_KEY_TEXT_INPUT, 'SECRET KEY');
             self::createConfigPageInput('number',Config::DUE_DATE_NUMBER_INPUT, 'REQUEST EXPIRY PERIOD', '(Time in minutes)');
-            self::createConfigPageSelect(Config::CHECKOUT_TYPE_SELECT_INPUT, 'CHECKOUT TYPE', array_map(function($item) {
-                return ["name" => ucfirst($item), "value" => $item];
-            }, Config::CHECKOUT_TYPES));
-            self::createConfigPageSelect(Config::COUNTRY_CODE_SELECT_INPUT, 'COUNTRY OF OPERATION', array_map(function($item, $key) {
-                return ["name" => ucfirst($key), "value" => $item["countryCode"]];
-            }, Config::COUNTRIES, array_keys(Config::COUNTRIES)));
+            self::createConfigPageInput('text',Config::WEBHOOK_URL_TEXT_INPUT, 'WEBHOOK URL');
+
+            self::createConfigPageSelect(
+                Config::CHECKOUT_TYPE_SELECT_INPUT, 
+                'CHECKOUT TYPE', 
+                array_map(function($item) {
+                    return ["name" => ucfirst($item), "value" => $item];
+                }, Config::CHECKOUT_TYPES)
+            );
+
+            self::createConfigPageSelect(
+                Config::COUNTRY_CODE_SELECT_INPUT, 
+                'COUNTRY OF OPERATION', 
+                array_map(function($item, $key) {
+                    return ["name" => ucfirst($key), "value" => $item["countryCode"]];
+                }, Config::COUNTRIES, array_keys(Config::COUNTRIES))
+            );
         });
 
         Menu::createTopLevelMenu();
